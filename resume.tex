@@ -1,0 +1,240 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Add this new command for skills with heading and content on separate lines
+\newcommand{\skillItem}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \\
+    \end{tabular*}\vspace{-7pt}
+    \resumeItemListStart
+      \resumeItem{#2}
+    \resumeItemListEnd
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Edward J Tan} &  \href{mailto:etan7@u.rochester.edu}{etan7@u.rochester.edu}\\
+  U.S. Citizen & 669-281-9748 \\
+  \href{https://www.linkedin.com/in/edward-j-tan/}{LinkedIn} $|$ \href{https://github.com/EdwardJiazhenTan}{GitHub} $|$ \href{https://www.edwardjtan.com/}{Portfolio} $|$ \href{https://blog.edwardjtan.com/}{Blog} & Rochester, NY \\
+\end{tabular*}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {University of Rochester}{Rochester, NY}
+      {BS in Computer Science; BS in Business Information Systems}{Sep 2021 -- May 2025}
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+
+\resumeSubheading
+  {GTSP Group}{Santa Clara, CA}
+  {Software Developer Intern}{Dec 2024 -- Feb 2025}
+  \resumeItemListStart
+
+    \resumeItem{Implemented hybrid REST APIs and gRPC for real-time audio AI platform, reducing streaming latency by 35\%}
+
+    \resumeItem{Developed animations with React and Three.js in collaboration with UI/UX designers, applying performance optimization with lazy loading, reducing bounce rate by 20\%}
+
+    \resumeItem{Enhanced developer documentation infrastructure using Zola static site generator, collaborating with agile development teams to implement automated deployment and rapid documentation updates}
+
+    \resumeItem{Streamlined GitHub Actions CI/CD pipelines with QA teams, implementing automated test coverage analysis and improving coverage from 95\% to 99\%}
+
+  \resumeItemListEnd
+
+
+\resumeSubheading
+  {Peking University}{Remote}
+  {Research Assistant}{May 2024 -- Aug 2024}
+  \resumeItemListStart
+
+    \resumeItem{Prototyped 3D model rendering tool in React and WebGL for Computer Vision research through close collaboration with researchers, enabling research outcome visualization at 60+ FPS}
+
+    \resumeItem{Developed image gallery component in open source codebase with base64 streaming, allowing researchers to trace 3D model origins through source image visualization}
+
+    \resumeItem{Accelerated 3D data transmission using msgpack compression over WebSocket, achieving 45\% bandwidth reduction for large-scale point cloud and mesh datasets}
+
+  \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Meju -- Meal Order System}}{\href{https://github.com/EdwardJiazhenTan/meju}{Source Code $\nearrow$}}
+          \resumeItemListStart
+            \resumeItem{Designed meal ordering application using Next.js and PostgreSQL to automate meal selection, recipe finding, and shopping list planning with OCR import, saving users over 2 hours per week}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{LeetTrack -- LeetCode Review Platform}}{\href{https://leettrack.app}{Demo $\nearrow$} $|$ \href{https://github.com/EdwardJiazhenTan/LeetTrack}{Source Code $\nearrow$}}
+          \resumeItemListStart
+            \resumeItem{Engineered question review platform addressing LeetCode's missing spaced repetition feature using Next.js, FastAPI, and PostgreSQL, deployed on Vercel and AWS, growing to 140+ users}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{RustDrop -- Secure LAN File Sharing Service}}{\href{https://github.com/EdwardJiazhenTan/RustDrop}{Source Code $\nearrow$}}
+          \resumeItemListStart
+            \resumeItem{Built encrypted cross-platform file sharing service using Rust, clap, and Axum with CLI and web interfaces, enabling secure transfer of sensitive files across Linux, MacOS, and iOS}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Hecto -- TUI Text Editor}}{\href{https://github.com/EdwardJiazhenTan/hecto}{Source Code $\nearrow$}}
+          \resumeItemListStart
+            \resumeItem{Developed terminal-based text editor from scratch using Rust, implementing cursor movement, file I/O operations, syntax highlighting, and search functionality with raw terminal control}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+  \resumeSubHeadingListStart
+
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small Languages:} \small TypeScript, JavaScript, Rust, Python, Java, SQL, Bash/Shell, HTML/CSS& \\
+    \end{tabular*}\vspace{-7pt}
+    
+
+    
+
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small Frontend \& Backend:} \small React, Next.js, FastAPI, Django, Node.js, WebGL, TailwindCSS, REST API, Express.js& \\
+    \end{tabular*}\vspace{-7pt}
+    
+
+    
+
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small Database \& Infrastructure:} \small PostgreSQL, MongoDB, Redis, GraphQL, WebSocket, Docker, Kubernetes, Microservices& \\
+    \end{tabular*}\vspace{-7pt}
+    
+
+    
+
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small DevOps \& Monitoring:} \small Linux, Git, CI/CD, Jest, AWS (EC2, RDS, S3), Vercel, Nginx, Prometheus, Grafana& \\
+    \end{tabular*}\vspace{-7pt}
+    
+
+  \resumeSubHeadingListEnd
+
+\end{document}
