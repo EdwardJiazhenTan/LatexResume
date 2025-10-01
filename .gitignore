@@ -1,0 +1,22 @@
+# Personal resume data backup
+resume_bak.yaml
+
+# Generated PDFs
+*.pdf
+!demo/*.pdf
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+
+# Backup directories
+backups/
+
+# Python virtual environments
+venv/
+env/
+.env
+
+# System files
+.DS_Store
