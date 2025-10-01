@@ -4,7 +4,7 @@ A Python-based resume generation system using YAML data and LaTeX templates.
 
 ## Demo
 
-![Resume Preview](Resume.pdf)
+![Resume Preview](demo/demo.png)
 
 ## Setup
 
