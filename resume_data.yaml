@@ -10,12 +10,12 @@ personal_info:
     portfolio: "https://edwardjtan.com"
     blog: "https://blog.edwardjtan.com"
 
-summary: "New Grad CS student with experience full-stack development trough internships and research."
+summary: "Fullstack developer, 2025 CS graduate, with experience shipping software through internships and open-source projects. Fast learner, values teamwork and is passionate about systems programming and modern web frameworks."
 
 education:
   - institution: "University of Rochester"
     location: "Rochester, NY"
-    degree: "Bachelor of Science in Computer Science; Bachelor of Science in Business Information Systems"
+    degree: "BS in Computer Science; BS in Business Information Systems"
     period: "Sep 2021 -- May 2025"
 
 experience:
@@ -25,35 +25,32 @@ experience:
     period: "Dec 2024 -- Feb 2025"
     achievements:
       - "Implemented hybrid REST APIs and gRPC for real-time audio AI platform, reducing streaming latency by 35%"
-      - "Developed frontend transition animations with React and Three.js in collaboration with UI/UX designers, applying performance optimization with lazy loading, reducing bounce rate by 20%"
-      - "Enhanced developer documentation infrastructure using Zola static site generator, collaborating with agile development teams to implement automated deployment and rapid documentation updates"
-      - "Streamlined GitHub Actions CI/CD pipelines, implementing automated test coverage analysis and improving coverage from 95% to 99%"
+      - "Developed frontend transition animations with React and Three.js in collaboration with UI/UX designers"
+      - "Enhanced and maintained developer documentation site with automated deployment, working closely with developers to publish daily documentation updates"
 
   - company: "Peking University"
     location: "Remote"
     position: "Software Developer Intern"
     period: "May 2024 -- Aug 2024"
     achievements:
-      - "Prototyped 3D model rendering tool in React and WebGL for Computer Vision research through close collaboration with researchers, enabling research outcome visualization at 60+ FPS"
-      - "Developed image gallery component in open source codebase with base64 streaming, allowing researchers to trace 3D model origins through source image visualization"
-      - "Accelerated 3D data transmission using msgpack compression over WebSocket, achieving 45% bandwidth reduction for large-scale point cloud and mesh datasets"
+      - "Built 3D model renderer in React for Computer Vision research, enabling real-time rendering at 60 FPS"
+      - "Developed image viewer allowing researchers to compare source images with generated 3D models"
+      - "Optimized data transmission with msgpack compression over WebSocket, reducing bandwidth by 45% for large 3D datasets"
 
 projects:
-  - name: "Meju -- Meal Order System"
-    description: "Designed full-stack meal ordering platform for families and small restaurants using Next.js and PostgreSQL, featuring client/business interfaces, automated procurement planning, and one-click Vercel deployment"
-
-  - name: "LeetTrack -- LeetCode Review Platform"
-    description: "Engineered spaced repetition platform using Next.js, FastAPI, and PostgreSQL, integrating LeetCode GraphQL API for real-time user statistics and automated review scheduling"
-
-  - name: "Hecto -- TUI Text Editor"
-    description: "Developed terminal-based text editor from scratch using Rust, implementing cursor movement, file I/O operations, syntax highlighting, and search functionality with raw terminal control"
+  - name: "Hecto -- Lightweight Terminal Text Editor"
+    description: "Developed Vim-inspired text editor from scratch in Rust (<1000 lines), achieving <5ms startup time for 10MB files with cursor movement, file I/O, syntax highlighting, and search via raw terminal control"
+  - name: "Didact -- React implementation with Vanilla JS"
+    description: "Implemented React's core features in vanilla JavaScript including virtual DOM, fiber architecture, reconciliation, and hooks (useState, useEffect) to understand modern framework internals"
+  - name: "Meju -- Meal Planning Platform"
+    description: "Launched meal planning platform with Next.js and PostgreSQL for recipe management and automated shopping list generation, deployed on free hosting (Vercel/Neon) for personal and shared meal coordination"
+  - name: "LeetTrack -- LeetCode Review Scheduler"
+    description: "Shipped spaced repetition review platform with Next.js, PostgreSQL and FastAPI to supplement LeetCode's study plans, integrating LeetCode GraphQL API for automated review scheduling based on user progress"
 
 skills:
   - category: "Languages"
-    items: "TypeScript, JavaScript, Rust, Python, Java, SQL, Bash/Shell, HTML/CSS"
-  - category: "Frontend & Backend"
-    items: "React, Next.js, FastAPI, Django, Node.js, WebGL, TailwindCSS, REST API, Express.js"
-  - category: "Database & Infrastructure"
-    items: "PostgreSQL, MongoDB, Redis, GraphQL, WebSocket, Docker, Kubernetes, Microservices"
-  - category: "DevOps & Monitoring"
-    items: "Linux, Git, CI/CD, Jest, AWS (EC2, RDS, S3), Vercel, Nginx, Prometheus, Grafana"
+    items: "TypeScript, JavaScript, Rust, Python, Java, SQL, Bash/Shell, HTML, CSS"
+  - category: "Web Development"
+    items: "React, Next.js, FastAPI, Node.js, PostgreSQL, Redis, WebSocket, Nginx, TailwindCSS"
+  - category: "Tools & Platform"
+    items: "Linux, Git, CI/CD, Jest, AWS (EC2, RDS, S3), Vercel, Docker, Prometheus, Grafana"
