@@ -20,6 +20,7 @@ python generate_resume.py
 Or with custom file paths:
 ```bash
 python generate_resume.py --data resume_data.yaml --template resume_template.tex --output resume.tex
+
 ```
 
 3. Compile the LaTeX file to PDF:

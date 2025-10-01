@@ -118,9 +118,10 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large << personal_info.name >>} &  \href{mailto:<< personal_info.email >>}{<< personal_info.email >>}\\
-  << personal_info.citizenship >> & << personal_info.phone >> \\
-  \href{<< personal_info.links.linkedin >>}{LinkedIn} $|$ \href{<< personal_info.links.github >>}{GitHub} $|$ \href{<< personal_info.links.portfolio >>}{Portfolio} $|$ \href{<< personal_info.links.blog >>}{Blog} & << personal_info.location >> \\
+  \textbf{\Large << personal_info.name >>} & \href{<< personal_info.links.github >>}{github.com/EdwardJiazhenTan} \\
+  << personal_info.citizenship >> & \href{<< personal_info.links.linkedin >>}{linkedin.com/in/edward-j-tan} \\
+  << personal_info.phone >> & \href{<< personal_info.links.blog >>}{blog.edwardjtan.com} \\
+  \href{mailto:<< personal_info.email >>}{<< personal_info.email >>} & \href{<< personal_info.links.portfolio >>}{edwardjtan.com} \\
 \end{tabular*}
 
 %-----------EDUCATION-----------
@@ -143,7 +144,7 @@
   {<< exp.position >>}{<< exp.period >>}
   \resumeItemListStart
 <BLOCK>for achievement in exp.achievements</BLOCK>
-    \resumeItem{<< achievement >>}
+    \resumeItem{<< achievement | latex_escape >>}
 <BLOCK>endfor</BLOCK>
   \resumeItemListEnd
 <BLOCK>endfor</BLOCK>
@@ -155,9 +156,9 @@
     \resumeSubHeadingListStart
 <BLOCK>for project in projects</BLOCK>
       \resumeProjectHeading
-          {\textbf{<< project.name >>}}<BLOCK>if project.demo_url and project.source_url</BLOCK>{\href{<< project.demo_url >>}{Demo $\nearrow$} $|$ \href{<< project.source_url >>}{Source Code $\nearrow$}}<BLOCK>elif project.url</BLOCK>{\href{<< project.url >>}{Source Code $\nearrow$}}<BLOCK>endif</BLOCK>
+          {\textbf{<< project.name >>}}<BLOCK>if project.demo_url</BLOCK>{\href{<< project.demo_url >>}{<< project.demo_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} $|$ \href{<< project.source_url >>}{<< project.source_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}}<BLOCK>else</BLOCK>{\href{<< project.source_url >>}{<< project.source_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}}<BLOCK>endif</BLOCK>
           \resumeItemListStart
-            \resumeItem{<< project.description >>}
+            \resumeItem{<< project.description | latex_escape >>}
           \resumeItemListEnd
 <BLOCK>endfor</BLOCK>
     \resumeSubHeadingListEnd
@@ -169,7 +170,7 @@
 <BLOCK>for skill in skills</BLOCK>
     \item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small << skill.category >>:} \small << skill['items'] >>& \\
+      \textbf{\small << skill.category | latex_escape >>:} \small << skill['items'] | latex_escape >>& \\
     \end{tabular*}\vspace{-7pt}
     <BLOCK>if not loop.last</BLOCK>
 

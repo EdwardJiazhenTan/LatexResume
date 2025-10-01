@@ -1,19 +1,19 @@
 personal_info:
-  name: "Edward J Tan"
+  name: "Edward Jiazhen Tan"
   email: "etan7@u.rochester.edu"
   phone: "669-281-9748"
   location: "Rochester, NY"
-  citizenship: "U.S. Citizen"
+  citizenship: "US Citizen"
   links:
-    linkedin: "https://www.linkedin.com/in/edward-j-tan/"
+    linkedin: "https://linkedin.com/in/edward-j-tan"
     github: "https://github.com/EdwardJiazhenTan"
-    portfolio: "https://www.edwardjtan.com/"
-    blog: "https://blog.edwardjtan.com/"
+    portfolio: "https://edwardjtan.com"
+    blog: "https://blog.edwardjtan.com"
 
 education:
   - institution: "University of Rochester"
     location: "Rochester, NY"
-    degree: "BS in Computer Science; BS in Business Information Systems"
+    degree: "Bachelor of Science in Computer Science; Bachelor of Science in Business Information Systems"
     period: "Sep 2021 -- May 2025"
 
 experience:
@@ -22,47 +22,41 @@ experience:
     position: "Software Developer Intern"
     period: "Dec 2024 -- Feb 2025"
     achievements:
-      - "Implemented hybrid REST APIs and gRPC for real-time audio AI platform, reducing streaming latency by 35\\%"
-      - "Developed animations with React and Three.js in collaboration with UI/UX designers, applying performance optimization with lazy loading, reducing bounce rate by 20\\%"
+      - "Implemented hybrid REST APIs and gRPC for real-time audio AI platform, reducing streaming latency by 35%"
+      - "Developed frontend transition animations with React and Three.js in collaboration with UI/UX designers, applying performance optimization with lazy loading, reducing bounce rate by 20%"
       - "Enhanced developer documentation infrastructure using Zola static site generator, collaborating with agile development teams to implement automated deployment and rapid documentation updates"
-      - "Streamlined GitHub Actions CI/CD pipelines with QA teams, implementing automated test coverage analysis and improving coverage from 95\\% to 99\\%"
+      - "Streamlined GitHub Actions CI/CD pipelines, implementing automated test coverage analysis and improving coverage from 95% to 99%"
 
   - company: "Peking University"
     location: "Remote"
-    position: "Research Assistant"
+    position: "Software Developer Intern"
     period: "May 2024 -- Aug 2024"
     achievements:
       - "Prototyped 3D model rendering tool in React and WebGL for Computer Vision research through close collaboration with researchers, enabling research outcome visualization at 60+ FPS"
       - "Developed image gallery component in open source codebase with base64 streaming, allowing researchers to trace 3D model origins through source image visualization"
-      - "Accelerated 3D data transmission using msgpack compression over WebSocket, achieving 45\\% bandwidth reduction for large-scale point cloud and mesh datasets"
+      - "Accelerated 3D data transmission using msgpack compression over WebSocket, achieving 45% bandwidth reduction for large-scale point cloud and mesh datasets"
 
 projects:
   - name: "Meju -- Meal Order System"
-    url: "https://github.com/EdwardJiazhenTan/meju"
-    description: "Designed meal ordering application using Next.js and PostgreSQL to automate meal selection, recipe finding, and shopping list planning with OCR import, saving users over 2 hours per week"
+    demo_url: "https://meju.app"
+    source_url: "https://github.com/EdwardJiazhenTan/meju"
+    description: "Designed full-stack meal ordering platform for families and small restaurants using Next.js and PostgreSQL, featuring client/business interfaces, automated procurement planning, and one-click Vercel deployment"
 
   - name: "LeetTrack -- LeetCode Review Platform"
     demo_url: "https://leettrack.app"
     source_url: "https://github.com/EdwardJiazhenTan/LeetTrack"
-    description: "Engineered question review platform addressing LeetCode's missing spaced repetition feature using Next.js, FastAPI, and PostgreSQL, deployed on Vercel and AWS, growing to 140+ users"
-
-  - name: "RustDrop -- Secure LAN File Sharing Service"
-    url: "https://github.com/EdwardJiazhenTan/RustDrop"
-    description: "Built encrypted cross-platform file sharing service using Rust, clap, and Axum with CLI and web interfaces, enabling secure transfer of sensitive files across Linux, MacOS, and iOS"
+    description: "Engineered spaced repetition platform using Next.js, FastAPI, and PostgreSQL, integrating LeetCode GraphQL API for real-time user statistics and automated review scheduling"
 
   - name: "Hecto -- TUI Text Editor"
-    url: "https://github.com/EdwardJiazhenTan/hecto"
+    source_url: "https://github.com/EdwardJiazhenTan/hecto"
     description: "Developed terminal-based text editor from scratch using Rust, implementing cursor movement, file I/O operations, syntax highlighting, and search functionality with raw terminal control"
 
 skills:
   - category: "Languages"
     items: "TypeScript, JavaScript, Rust, Python, Java, SQL, Bash/Shell, HTML/CSS"
-
-  - category: "Frontend \\& Backend"
+  - category: "Frontend & Backend"
     items: "React, Next.js, FastAPI, Django, Node.js, WebGL, TailwindCSS, REST API, Express.js"
-
-  - category: "Database \\& Infrastructure"
+  - category: "Database & Infrastructure"
     items: "PostgreSQL, MongoDB, Redis, GraphQL, WebSocket, Docker, Kubernetes, Microservices"
-
-  - category: "DevOps \\& Monitoring"
+  - category: "DevOps & Monitoring"
     items: "Linux, Git, CI/CD, Jest, AWS (EC2, RDS, S3), Vercel, Nginx, Prometheus, Grafana"

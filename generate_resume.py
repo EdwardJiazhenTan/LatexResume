@@ -91,7 +91,7 @@ def compile_pdf(tex_file: str, output_name: str = "Edward_Tan_Resume") -> bool:
             shutil.move(str(generated_pdf), str(target_pdf))
 
         # Clean up auxiliary files
-        aux_extensions = ['.aux', '.log', '.out', '.fls', '.fdb_latexmk']
+        aux_extensions = ['.aux', '.out', '.fls', '.fdb_latexmk']
         for ext in aux_extensions:
             aux_file = tex_path.with_suffix(ext)
             if aux_file.exists():
