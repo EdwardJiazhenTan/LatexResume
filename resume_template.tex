@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -118,10 +119,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large << personal_info.name >>} & \href{<< personal_info.links.github >>}{<< personal_info.links.github | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
-  << personal_info.citizenship >> & \href{<< personal_info.links.linkedin >>}{<< personal_info.links.linkedin | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
-  << personal_info.phone >> & \href{<< personal_info.links.blog >>}{<< personal_info.links.blog | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
-  \href{mailto:<< personal_info.email >>}{<< personal_info.email >>} & \href{<< personal_info.links.portfolio >>}{<< personal_info.links.portfolio | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
+  \textbf{\Large << personal_info.name >>} & << personal_info.phone >> \\
+  << personal_info.citizenship >> $|$ << personal_info.location >> & \href{mailto:<< personal_info.email >>}{<< personal_info.email >>} \\
 \end{tabular*}
 
 <BLOCK>if summary</BLOCK>
@@ -185,5 +184,15 @@
     <BLOCK>endif</BLOCK>
 <BLOCK>endfor</BLOCK>
   \resumeSubHeadingListEnd
+
+%-----------LINKS-----------
+\vspace{10pt}
+\begin{center}
+  \small
+  \faGithub\ \href{<< personal_info.links.github >>}{<< personal_info.links.github | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \hspace{10pt} $|$ \hspace{10pt}
+  \faLinkedin\ \href{<< personal_info.links.linkedin >>}{<< personal_info.links.linkedin | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \hspace{10pt} $|$ \hspace{10pt}
+  \faGlobe\ \href{<< personal_info.links.portfolio >>}{<< personal_info.links.portfolio | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \hspace{10pt} $|$ \hspace{10pt}
+  \faRss\ \href{<< personal_info.links.blog >>}{<< personal_info.links.blog | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}
+\end{center}
 
 \end{document}

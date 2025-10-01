@@ -1,54 +1,53 @@
 # Resume Generator
 
-A Python-based resume generation system that uses YAML for data and Jinja2 templates for LaTeX output.
+A Python-based resume generation system using YAML data and LaTeX templates.
 
 ## Setup
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+1. **Clone and navigate**
+   ```bash
+   git clone <repository-url>
+   cd Resume
+   ```
 
-## Usage
+2. **Install LaTeX**
+   - macOS: `brew install --cask mactex`
+   - Ubuntu: `sudo apt-get install texlive-full`
+   - Windows: Install MiKTeX or TeX Live
 
-1. Edit your resume data in `resume_data.yaml`
-2. Generate your resume:
-```bash
-python generate_resume.py
-```
+3. **Setup Python environment**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-Or with custom file paths:
-```bash
-python generate_resume.py --data resume_data.yaml --template resume_template.tex --output resume.tex
+4. **Install Python dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```
+5. **Generate resume**
+   ```bash
+   python3 generate_resume.py
+   ```
 
-3. Compile the LaTeX file to PDF:
-```bash
-pdflatex resume.tex
-```
+## Customization
+
+6. **Edit content**: Modify `resume_data.yaml` with your information
+
+7. **Personalize output**: 
+   - Change PDF filename in `generate_resume.py` (line 69, default: "Resume")
+   - Adjust link display text in `resume_template.tex` header section
+
+## Branch Structure
+
+- `master` - Public template with placeholder data
+- `personal` - Your personal information (keep local)
+- `experiment-*` - Experimental layout branches
 
 ## File Structure
 
-- `resume_data.yaml` - Your resume data in YAML format
+- `resume_data.yaml` - Resume content in YAML
 - `resume_template.tex` - LaTeX template with Jinja2 variables
-- `generate_resume.py` - Python script to generate LaTeX from YAML
+- `generate_resume.py` - Generation script
 - `requirements.txt` - Python dependencies
-- `AndrewResumeWorkshop.tex` - Original resume file (for reference)
-
-## Editing Resume Data
-
-All resume content is stored in `resume_data.yaml`. The structure includes:
-
-- `personal_info` - Name, contact information, links
-- `education` - Educational background
-- `experience` - Work experience with achievements
-- `projects` - Personal/academic projects
-- `skills` - Technical skills organized by category
-
-## Benefits
-
-- **Separation of Content and Format**: Edit content in YAML, format stays in LaTeX template
-- **Version Control Friendly**: YAML is easier to track changes than LaTeX
-- **Reusable**: Can generate different resume formats from same data
-- **Maintainable**: Update content without touching LaTeX formatting

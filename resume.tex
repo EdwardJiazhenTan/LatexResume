@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -118,10 +119,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large YourYour NameName} & \href{https://github.com/yourusername}{github.com/yourusername} \\
-  US Citizen & \href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \\
-  123-456-7890 & \href{https://yourblog.com}{yourblog.com} \\
-  \href{mailto:your.email@example.com}{your.email@example.com} & \href{https://yourportfolio.com}{yourportfolio.com} \\
+  \textbf{\Large YourYour NameName} & 123-456-7890 \\
+  US Citizen $|$ City, State & \href{mailto:your.email@example.com}{your.email@example.com} \\
 \end{tabular*}
 
 
@@ -154,7 +153,7 @@
 
     \resumeItem{Implemented X feature using Y technology, resulting in Z\% performance improvement}
 
-    \resumeItem{Developed X component with Y framework in collaboration with Z team, achieving A\% improvement in B metric}
+    \resumeItem{Developed X component with Y framework in collaboration with Z team, achieving A\% improvement in B}
 
     \resumeItem{Enhanced X system using Y tool, collaborating with Z team to implement A feature and achieve B outcome}
 
@@ -239,5 +238,15 @@
     
 
   \resumeSubHeadingListEnd
+
+%-----------LINKS-----------
+\vspace{10pt}
+\begin{center}
+  \small
+  \faGithub\ \href{https://github.com/yourusername}{github.com/yourusername} \hspace{10pt} $|$ \hspace{10pt}
+  \faLinkedin\ \href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \hspace{10pt} $|$ \hspace{10pt}
+  \faGlobe\ \href{https://yourportfolio.com}{yourportfolio.com} \hspace{10pt} $|$ \hspace{10pt}
+  \faRss\ \href{https://yourblog.com}{yourblog.com}
+\end{center}
 
 \end{document}
