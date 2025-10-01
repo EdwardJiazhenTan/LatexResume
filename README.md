@@ -4,7 +4,7 @@ A Python-based resume generation system using YAML data and LaTeX templates.
 
 ## Demo
 
-![Resume Preview](Resume.pdf)
+![Resume Preview](demo/demo.png)
 
 ## Setup
 
@@ -39,7 +39,7 @@ A Python-based resume generation system using YAML data and LaTeX templates.
 
 6. **Edit content**: Modify `resume_data.yaml` with your information
 
-7. **Personalize output**: 
+7. **Personalize output**:
    - Change PDF filename in `generate_resume.py` (line 69, default: "Resume")
    - Adjust link display text in `resume_template.tex` header section
 
