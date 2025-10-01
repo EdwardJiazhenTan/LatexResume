@@ -118,11 +118,19 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large << personal_info.name >>} & \href{<< personal_info.links.github >>}{github.com/EdwardJiazhenTan} \\
-  << personal_info.citizenship >> & \href{<< personal_info.links.linkedin >>}{linkedin.com/in/edward-j-tan} \\
-  << personal_info.phone >> & \href{<< personal_info.links.blog >>}{blog.edwardjtan.com} \\
-  \href{mailto:<< personal_info.email >>}{<< personal_info.email >>} & \href{<< personal_info.links.portfolio >>}{edwardjtan.com} \\
+  \textbf{\Large << personal_info.name >>} & \href{<< personal_info.links.github >>}{<< personal_info.links.github | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
+  << personal_info.citizenship >> & \href{<< personal_info.links.linkedin >>}{<< personal_info.links.linkedin | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
+  << personal_info.phone >> & \href{<< personal_info.links.blog >>}{<< personal_info.links.blog | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
+  \href{mailto:<< personal_info.email >>}{<< personal_info.email >>} & \href{<< personal_info.links.portfolio >>}{<< personal_info.links.portfolio | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} \\
 \end{tabular*}
+
+<BLOCK>if summary</BLOCK>
+%-----------SUMMARY-----------
+\section{Summary}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{<< summary | latex_escape >>}}
+  \end{itemize}
+<BLOCK>endif</BLOCK>
 
 %-----------EDUCATION-----------
 \section{Education}

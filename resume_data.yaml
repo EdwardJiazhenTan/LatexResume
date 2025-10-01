@@ -10,6 +10,8 @@ personal_info:
     portfolio: "https://yourportfolio.com"
     blog: "https://yourblog.com"
 
+summary: "Brief description of your most important skills and experience. Highlight your key strengths and what makes you unique as a candidate."
+
 education:
   - institution: "Your University"
     location: "City, State"
@@ -38,17 +40,12 @@ experience:
 
 projects:
   - name: "Project 1 -- Description"
-    demo_url: "https://project1.example.com"
-    source_url: "https://github.com/yourusername/project1"
     description: "Designed X application for Y users using Z and A technologies, featuring B and C capabilities, and D deployment option"
 
   - name: "Project 2 -- Description"
-    demo_url: "https://project2.example.com"
-    source_url: "https://github.com/yourusername/project2"
     description: "Engineered X platform using Y, Z, and A technologies, integrating B API for C functionality and D feature"
 
   - name: "Project 3 -- Description"
-    source_url: "https://github.com/yourusername/project3"
     description: "Developed X application from scratch using Y technology, implementing A, B, C, and D features with E functionality"
 
 skills:
