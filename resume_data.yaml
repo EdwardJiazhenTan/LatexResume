@@ -1,14 +1,14 @@
 personal_info:
-  name: "Edward Jiazhen Tan"
-  email: "etan7@u.rochester.edu"
-  phone: "669-281-9748"
-  location: "Rochester, NY"
+  name: "Your Name"
+  email: "your.email@example.com"
+  phone: "123-456-7890"
+  location: "City, State"
   citizenship: "US Citizen"
   links:
-    linkedin: "https://linkedin.com/in/edward-j-tan"
-    github: "https://github.com/EdwardJiazhenTan"
-    portfolio: "https://edwardjtan.com"
-    blog: "https://blog.edwardjtan.com"
+    linkedin: "https://linkedin.com/in/your-profile"
+    github: "https://github.com/yourusername"
+    portfolio: "https://yourportfolio.com"
+    blog: "https://yourblog.com"
 
 education:
   - institution: "University of Rochester"

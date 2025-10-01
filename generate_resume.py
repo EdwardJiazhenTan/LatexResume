@@ -67,7 +67,7 @@ def generate_latex_resume(data: dict, template_file: str, output_file: str):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(rendered)
 
-def compile_pdf(tex_file: str, output_name: str = "Edward_Tan_Resume") -> bool:
+def compile_pdf(tex_file: str, output_name: str = "Resume") -> bool:
     """Compile LaTeX file to PDF using pdflatex."""
     try:
         # Run pdflatex twice for proper reference resolution
@@ -127,7 +127,7 @@ def main():
                        help='LaTeX template file')
     parser.add_argument('--output', '-o', default='resume.tex',
                        help='Output LaTeX file')
-    parser.add_argument('--pdf-name', default='Edward_Tan_Resume',
+    parser.add_argument('--pdf-name', default='Resume',
                        help='Name for the generated PDF (without .pdf extension)')
     parser.add_argument('--backup-dir', default='backups',
                        help='Directory for timestamped backups')
