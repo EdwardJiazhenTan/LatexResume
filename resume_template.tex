@@ -163,9 +163,11 @@
     \resumeSubHeadingListStart
 <BLOCK>for project in projects</BLOCK>
       \resumeProjectHeading
-          {\textbf{<< project.name >>}}<BLOCK>if project.demo_url</BLOCK>{\href{<< project.demo_url >>}{<< project.demo_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} $|$ \href{<< project.source_url >>}{<< project.source_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}}<BLOCK>else</BLOCK>{\href{<< project.source_url >>}{<< project.source_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}}<BLOCK>endif</BLOCK>
+          {\textbf{<< project.name >>}}<BLOCK>if project.demo_url</BLOCK>{\href{<< project.demo_url >>}{<< project.demo_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} $|$ \href{<< project.source_url >>}{<< project.source_url | replace('https://', '') | replace('http://', '') | replace('www.', '') >>}}<BLOCK>else</BLOCK>{\href{}{}}<BLOCK>endif</BLOCK>
           \resumeItemListStart
-            \resumeItem{<< project.description | latex_escape >>}
+<BLOCK>for point in project.points</BLOCK>
+            \resumeItem{<< point | latex_escape >>}
+<BLOCK>endfor</BLOCK>
           \resumeItemListEnd
 <BLOCK>endfor</BLOCK>
     \resumeSubHeadingListEnd
@@ -186,7 +188,7 @@
   \resumeSubHeadingListEnd
 
 %-----------LINKS-----------
-\vspace{10pt}
+\vspace{3pt}
 \begin{center}
   \small
   \faGithub\ \href{<< personal_info.links.github >>}{<< personal_info.links.github | replace('https://', '') | replace('http://', '') | replace('www.', '') >>} $|$

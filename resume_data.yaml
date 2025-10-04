@@ -10,7 +10,9 @@ personal_info:
     portfolio: "https://edwardjtan.com"
     blog: "https://blog.edwardjtan.com"
 
-summary: "Fullstack developer, 2025 CS graduate, with experience shipping software through internships and open-source projects. Fast learner, values teamwork and is passionate about systems programming and modern web frameworks."
+summary: "Full-stack engineer who combines web development with systems programming 
+background. Shipped production features and developer tools. Dives deep into 
+fundamentals through projects and open-source contributions."
 
 education:
   - institution: "University of Rochester"
@@ -24,33 +26,38 @@ experience:
     position: "Software Developer Intern"
     period: "Dec 2024 -- Feb 2025"
     achievements:
-      - "Implemented hybrid REST APIs and gRPC for real-time audio AI platform, reducing streaming latency by 35%"
-      - "Developed frontend transition animations with React and Three.js in collaboration with UI/UX designers"
-      - "Enhanced and maintained developer documentation site with automated deployment, working closely with developers to publish daily documentation updates"
+      - "Developed frontend features with Three.js and vanilla JavaScript in close collaboration with UI/UX designers, implementing real-time waveform and smooth transition animations for production AI audio platform"
+      - "Built gRPC services and Django REST APIs for audio processing pipeline, deployed on AWS EC2 with Nginx and Docker, reducing input latency by 50% and average response time by 34%"
+      - "Automated CI/CD workflows using AWS CodePipeline, accelerating feature delivery by 15% and enabling daily automated documentation deployments"
 
   - company: "Peking University"
     location: "Remote"
     position: "Software Developer Intern"
     period: "May 2024 -- Aug 2024"
     achievements:
-      - "Built 3D model renderer in React for Computer Vision research, enabling real-time rendering at 60 FPS"
-      - "Developed image viewer allowing researchers to compare source images with generated 3D models"
-      - "Optimized data transmission with msgpack compression over WebSocket, reducing bandwidth by 45% for large 3D datasets"
+      - "Rebuilt Django backend to support advanced 3D rendering research, refactoring data pipeline to handle new file formats and improving rendering performance by 500% for real-time visualization"
+      - "Optimized network data transfer for large 3D models, reducing bandwidth usage by 45% and enabling real-time collaboration for distributed research team"
+      - "Prototyped visual validation system for comparing 3D reconstructions against source images, reducing model evaluation time by enabling side-by-side quality assessment"
 
 projects:
-  - name: "Hecto -- Lightweight Terminal Text Editor"
-    description: "Developed Vim-inspired text editor from scratch in Rust (<1000 lines), achieving <5ms startup time for 10MB files with cursor movement, file I/O, syntax highlighting, and search via raw terminal control"
-  - name: "Didact -- React implementation with Vanilla JS"
-    description: "Implemented React's core features in vanilla JavaScript including virtual DOM, fiber architecture, reconciliation, and hooks (useState, useEffect) to understand modern framework internals"
-  - name: "Meju -- Meal Planning Platform"
-    description: "Launched meal planning platform with Next.js and PostgreSQL for recipe management and automated shopping list generation, deployed on free hosting (Vercel/Neon) for personal and shared meal coordination"
-  - name: "LeetTrack -- LeetCode Review Scheduler"
-    description: "Shipped spaced repetition review platform with Next.js, PostgreSQL and FastAPI to supplement LeetCode's study plans, integrating LeetCode GraphQL API for automated review scheduling based on user progress"
+  - name: "Hecto – Terminal Text Editor in Rust"
+    points:
+      - "Developed text editor from scratch in Rust (<500 lines) achieving <5ms startup time for 10MB files"
+      - "Implemented incremental syntax highlighting, search functionality, and raw terminal control"
+  
+  - name: "JobTracker – Job Application Management TUI"
+    points:
+      - "Built terminal application in Rust using ratatui and crossterm with keyboard-driven workflow for efficient job application tracking"
+      - "Implemented real-time statistical visualizations displaying charts with JSON data persistence"
+  
+  - name: "LeetTrack – Interview Preparation Platform"
+    points:
+      - "Launched full-stack application for optimized LeetCode problem review scheduling based on performance"
+      - "Integrated GraphQL API with custom rate limiting and caching layer (Redis), automated background jobs, deployed with Next.js, PostgreSQL, FastAPI"
 
 skills:
-  - category: "Languages"
-    items: "TypeScript, JavaScript, Rust, Python, Java, SQL, Bash/Shell, HTML, CSS"
-  - category: "Web Development"
-    items: "React, Next.js, FastAPI, Node.js, PostgreSQL, Redis, WebSocket, Nginx, TailwindCSS"
-  - category: "Tools & Platform"
-    items: "Linux, Git, CI/CD, Jest, AWS (EC2, RDS, S3), Vercel, Docker, Prometheus, Grafana"
+  - category: "Languages & Frameworks"
+    items: "TypeScript, JavaScript, Rust, Python, SQL, React, Next.js, Django, FastAPI, PostgreSQL"
+  
+  - category: "Tools & Infrastructure"
+    items: "Git, Linux, Docker, AWS (EC2, RDS, S3, CodePipeline), CI/CD, WebSocket, gRPC, Nginx, Redis"
