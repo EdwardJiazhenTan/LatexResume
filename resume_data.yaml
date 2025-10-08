@@ -1,5 +1,5 @@
 personal_info:
-  name: "Edward Jiazhen Tan"
+  name: "Edward J Tan"
   email: "etan7@u.rochester.edu"
   phone: "669-281-9748"
   location: "Rochester, NY"
@@ -26,8 +26,8 @@ experience:
     position: "Software Developer Intern"
     period: "Dec 2024 -- Feb 2025"
     achievements:
-      - "Developed frontend features with Three.js and vanilla JavaScript in close collaboration with UI/UX designers, implementing real-time waveform and smooth transition animations for production AI audio platform"
-      - "Built gRPC services and Django REST APIs for audio processing pipeline, deployed on AWS EC2 with Nginx and Docker, reducing input latency by 50% and average response time by 34%"
+      - "Developed frontend features with JavaScript in close collaboration with UI/UX designers, implementing real-time waveform and transition animations for production AI audio platform"
+      - "Built gRPC services and Django REST APIs for audio processing pipeline, deployed on AWS EC2 with Nginx and Docker, reducing input latency by 10% and average response time by 24%"
       - "Automated CI/CD workflows using AWS CodePipeline, accelerating feature delivery by 15% and enabling daily automated documentation deployments"
 
   - company: "Peking University"
@@ -35,19 +35,19 @@ experience:
     position: "Software Developer Intern"
     period: "May 2024 -- Aug 2024"
     achievements:
-      - "Rebuilt Django backend to support advanced 3D rendering research, refactoring data pipeline to handle new file formats and improving rendering performance by 500% for real-time visualization"
-      - "Optimized network data transfer for large 3D models, reducing bandwidth usage by 45% and enabling real-time collaboration for distributed research team"
+      - "Rebuilt Flask backend to support advanced 3D rendering research, refactoring data pipeline to handle new file formats and improving rendering performance by 500% for real-time visualization"
+      - "Optimized network data transfer for large 3D models, reducing bandwidth usage by 25% and enabling real-time collaboration for distributed research team"
       - "Prototyped visual validation system for comparing 3D reconstructions against source images, reducing model evaluation time by enabling side-by-side quality assessment"
 
 projects:
   - name: "Hecto – Terminal Text Editor in Rust"
     points:
-      - "Developed text editor from scratch in Rust (<500 lines) achieving <5ms startup time for 10MB files"
+      - "Developed lightweight text editor from scratch in Rust achieving <5ms startup time for 10MB files"
       - "Implemented incremental syntax highlighting, search functionality, and raw terminal control"
   
   - name: "JobTracker – Job Application Management TUI"
     points:
-      - "Built terminal application in Rust using ratatui and crossterm with keyboard-driven workflow for efficient job application tracking"
+      - "Built terminal application in Rust using ratatui and crossterm, streamlining job tracking through keyboard-driven interface"
       - "Implemented real-time statistical visualizations displaying charts with JSON data persistence"
   
   - name: "LeetTrack – Interview Preparation Platform"
