@@ -1,0 +1,30 @@
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Generated files (will be mounted as volumes)
+resume/
+build/
+backups/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+demo/
+
+# System files
+.DS_Store
+*.swp
+*.swo
+
+# Personal data (keep these out of the image)
+src/*.yaml
+!src/example.yaml
+!src/example.tex

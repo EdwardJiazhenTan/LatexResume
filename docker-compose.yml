@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  resume-generator:
+    build: .
+    image: resume-generator:latest
+    volumes:
+      # Mount source files (read-only recommended for production)
+      - ./src:/app/src:ro
+      # Mount output directories (read-write)
+      - ./resume:/app/resume
+      - ./build:/app/build
+    command: python generate_resume.py
+
+  # Optional: Watch mode for live development
+  resume-watcher:
+    build: .
+    image: resume-generator:latest
+    volumes:
+      - ./src:/app/src
+      - ./resume:/app/resume
+      - ./build:/app/build
+    command: python watch_resume.py
+    # Keep container running and watching
+    stdin_open: true
+    tty: true

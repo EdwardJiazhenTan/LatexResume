@@ -6,7 +6,38 @@ A Python-based resume generation system using YAML data and LaTeX templates.
 
 ![Resume Preview](demo/demo.png)
 
-## Setup
+## Quick Start
+
+Choose your preferred method:
+
+### Option 1: Docker (Recommended - No Installation Required!)
+
+1. **Install Docker** ([Get Docker](https://docs.docker.com/get-docker/))
+
+2. **Clone and navigate**
+   ```bash
+   git clone <repository-url>
+   cd Resume
+   ```
+
+3. **Build the Docker image** (one-time, takes ~10-15 minutes)
+   ```bash
+   docker-compose build
+   ```
+
+4. **Generate resume**
+   ```bash
+   docker-compose up resume-generator
+   ```
+   Your PDF will be in `resume/Resume.pdf`!
+
+5. **Optional: Live development mode**
+   ```bash
+   docker-compose up resume-watcher
+   ```
+   Edit `src/example.yaml` and save - auto-regenerates!
+
+### Option 2: Local Installation (Traditional)
 
 1. **Clone and navigate**
    ```bash
@@ -36,6 +67,42 @@ A Python-based resume generation system using YAML data and LaTeX templates.
    ```
 
 ## Usage
+
+### Using Docker
+
+**One-time generation:**
+```bash
+docker-compose up resume-generator
+```
+
+**Live development mode:**
+```bash
+docker-compose up resume-watcher
+```
+
+**Custom parameters with Docker:**
+```bash
+# Generate with different YAML file
+docker-compose run --rm resume-generator python generate_resume.py --data src/backend.yaml --pdf-name Backend_Resume
+
+# Generate without backup
+docker-compose run --rm resume-generator python generate_resume.py --no-backup
+```
+
+**Alternative: Direct Docker (without docker-compose):**
+```bash
+# Build
+docker build -t resume-generator .
+
+# Run
+docker run --rm \
+  -v $(pwd)/src:/app/src:ro \
+  -v $(pwd)/resume:/app/resume \
+  -v $(pwd)/build:/app/build \
+  resume-generator
+```
+
+### Using Local Python
 
 ### One-time Generation
 
