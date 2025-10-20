@@ -124,9 +124,9 @@ def main():
     parser = argparse.ArgumentParser(description='Generate LaTeX resume from YAML data')
     parser.add_argument('--data', '-d', default='src/resume_data.yaml',
                        help='YAML file containing resume data')
-    parser.add_argument('--template', '-t', default='src/resume_template.tex',
+    parser.add_argument('--template', '-t', default='src/example.tex',
                        help='LaTeX template file')
-    parser.add_argument('--output', '-o', default='resume/resume.tex',
+    parser.add_argument('--output', '-o', default='build/resume.tex',
                        help='Output LaTeX file')
     parser.add_argument('--pdf-name', default='Resume',
                        help='Name for the generated PDF (without .pdf extension)')
@@ -160,9 +160,20 @@ def main():
         # Generate PDF unless disabled
         if not args.no_pdf:
             if compile_pdf(args.output, args.pdf_name):
-                # PDF is generated in the same directory as the tex file
-                output_dir = Path(args.output).parent
-                pdf_file = str(output_dir / f"{args.pdf_name}.pdf")
+                # PDF is generated in build/, move it to resume/
+                build_dir = Path(args.output).parent
+                build_pdf = build_dir / f"{args.pdf_name}.pdf"
+
+                # Ensure resume directory exists
+                resume_dir = Path("resume")
+                resume_dir.mkdir(exist_ok=True)
+
+                # Move PDF to resume directory
+                final_pdf = resume_dir / f"{args.pdf_name}.pdf"
+                if build_pdf.exists():
+                    shutil.move(str(build_pdf), str(final_pdf))
+
+                pdf_file = str(final_pdf)
                 print(f"PDF generated: {pdf_file}")
 
                 # Create backup unless disabled

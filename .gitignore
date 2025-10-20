@@ -5,16 +5,16 @@ resume_bak.yaml
 *.pdf
 !demo/*.pdf
 
-# LaTeX auxiliary files
+# LaTeX auxiliary files (kept in build/)
 *.aux
 *.log
 *.out
 
-# Generated resume files
-resume/
+# Build directory (intermediate files like .tex, .log)
+build/
 
-# Backup directories (now inside resume/)
-# backups/ already covered by resume/
+# Resume output directory (final PDFs and backups)
+resume/
 
 # Python virtual environments
 venv/
