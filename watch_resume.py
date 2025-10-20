@@ -16,7 +16,7 @@ from watchdog.events import FileSystemEventHandler
 class ResumeHandler(FileSystemEventHandler):
     """Handler for resume file changes."""
 
-    def __init__(self, yaml_file: str = "src/resume_data.yaml"):
+    def __init__(self, yaml_file: str = "src/example.yaml"):
         self.yaml_file = Path(yaml_file).resolve()
         self.last_modified = 0
 
@@ -57,7 +57,7 @@ class ResumeHandler(FileSystemEventHandler):
 
 def main():
     """Main function to start file watching."""
-    yaml_file = "src/resume_data.yaml"
+    yaml_file = "src/example.yaml"
     yaml_path = Path(yaml_file)
 
     if not yaml_path.exists():

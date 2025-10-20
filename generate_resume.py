@@ -70,13 +70,18 @@ def generate_latex_resume(data: dict, template_file: str, output_file: str):
 def compile_pdf(tex_file: str, output_name: str = "Resume") -> bool:
     """Compile LaTeX file to PDF using pdflatex."""
     try:
+        # Get the absolute path and just the filename
+        tex_path = Path(tex_file).resolve()
+        tex_filename = tex_path.name
+        tex_dir = tex_path.parent
+
         # Run pdflatex twice for proper reference resolution
         for _ in range(2):
             result = subprocess.run(
-                ['pdflatex', '-interaction=nonstopmode', tex_file],
+                ['pdflatex', '-interaction=nonstopmode', tex_filename],
                 capture_output=True,
                 text=True,
-                cwd=Path(tex_file).parent
+                cwd=tex_dir
             )
             if result.returncode != 0:
                 print(f"LaTeX compilation error: {result.stderr}")
@@ -122,7 +127,7 @@ def create_backup(pdf_file: str, backup_dir: str = "backups"):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate LaTeX resume from YAML data')
-    parser.add_argument('--data', '-d', default='src/resume_data.yaml',
+    parser.add_argument('--data', '-d', default='src/example.yaml',
                        help='YAML file containing resume data')
     parser.add_argument('--template', '-t', default='src/example.tex',
                        help='LaTeX template file')

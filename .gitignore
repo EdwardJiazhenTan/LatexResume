@@ -24,6 +24,6 @@ env/
 # System files
 .DS_Store
 
-# YAML files (except resume_data.yaml in src/)
+# YAML files (except example.yaml in src/)
 *.yaml
-!src/resume_data.yaml
+!src/example.yaml
