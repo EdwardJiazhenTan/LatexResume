@@ -22,18 +22,21 @@ Choose your preferred method:
 
 3. **Build the Docker image** (one-time, takes ~10-15 minutes)
    ```bash
-   docker-compose build
+   docker compose build
+   # Or if you have older Docker: docker-compose build
    ```
 
 4. **Generate resume**
    ```bash
-   docker-compose up resume-generator
+   docker compose up resume-generator
+   # Or: docker-compose up resume-generator
    ```
    Your PDF will be in `resume/Resume.pdf`!
 
 5. **Optional: Live development mode**
    ```bash
-   docker-compose up resume-watcher
+   docker compose up resume-watcher
+   # Or: docker-compose up resume-watcher
    ```
    Edit `src/example.yaml` and save - auto-regenerates!
 
@@ -72,21 +75,23 @@ Choose your preferred method:
 
 **One-time generation:**
 ```bash
-docker-compose up resume-generator
+docker compose up resume-generator
+# Or: docker-compose up resume-generator
 ```
 
 **Live development mode:**
 ```bash
-docker-compose up resume-watcher
+docker compose up resume-watcher
+# Or: docker-compose up resume-watcher
 ```
 
 **Custom parameters with Docker:**
 ```bash
 # Generate with different YAML file
-docker-compose run --rm resume-generator python generate_resume.py --data src/backend.yaml --pdf-name Backend_Resume
+docker compose run --rm resume-generator python generate_resume.py --data src/backend.yaml --pdf-name Backend_Resume
 
 # Generate without backup
-docker-compose run --rm resume-generator python generate_resume.py --no-backup
+docker compose run --rm resume-generator python generate_resume.py --no-backup
 ```
 
 **Alternative: Direct Docker (without docker-compose):**

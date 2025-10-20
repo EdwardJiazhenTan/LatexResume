@@ -19,14 +19,14 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Build Docker image
-      run: docker-compose build
+      run: docker compose build
 
     - name: Create output directories
       run: |
         mkdir -p resume build
 
     - name: Test resume generation
-      run: docker-compose up resume-generator
+      run: docker compose up resume-generator
 
     - name: Verify PDF was generated
       run: |
