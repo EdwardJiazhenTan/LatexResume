@@ -16,8 +16,8 @@ Choose your preferred method:
 
 2. **Clone and navigate**
    ```bash
-   git clone <repository-url>
-   cd Resume
+   git clone https://github.com/EdwardJiazhenTan/LatexResume.git
+   cd LatexResume
    ```
 
 3. **Build the Docker image** (one-time, takes ~10-15 minutes)
@@ -42,13 +42,15 @@ Choose your preferred method:
 
 ### Option 2: Local Installation (Traditional)
 
+> ⚠️ **Note:** This method requires installing LaTeX (~3GB download) on your system. If you want to avoid this, use Docker (Option 1) instead.
+
 1. **Clone and navigate**
    ```bash
-   git clone <repository-url>
-   cd Resume
+   git clone https://github.com/EdwardJiazhenTan/LatexResume.git
+   cd LatexResume
    ```
 
-2. **Install LaTeX**
+2. **Install LaTeX** (~3GB download)
    - macOS: `brew install --cask mactex`
    - Ubuntu: `sudo apt-get install texlive-full`
    - Windows: Install MiKTeX or TeX Live
