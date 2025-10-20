@@ -1,0 +1,74 @@
+name: Docker Build & Test
+
+on:
+  push:
+    branches: [ main, master, fullstack ]
+  pull_request:
+    branches: [ main, master, fullstack ]
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  docker-build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build Docker image
+      run: docker-compose build
+
+    - name: Create output directories
+      run: |
+        mkdir -p resume build
+
+    - name: Test resume generation
+      run: docker-compose up resume-generator
+
+    - name: Verify PDF was generated
+      run: |
+        if [ -f "resume/Resume.pdf" ]; then
+          echo "✅ PDF generated successfully!"
+          ls -lh resume/Resume.pdf
+        else
+          echo "❌ PDF generation failed!"
+          exit 1
+        fi
+
+    - name: Verify backup was created
+      run: |
+        if ls resume/backups/*.pdf 1> /dev/null 2>&1; then
+          echo "✅ Backup created successfully!"
+          ls -lh resume/backups/
+        else
+          echo "❌ Backup creation failed!"
+          exit 1
+        fi
+
+    - name: Check intermediate build files
+      run: |
+        if [ -f "build/resume.tex" ] && [ -f "build/resume.log" ]; then
+          echo "✅ Build artifacts created successfully!"
+          ls -lh build/
+        else
+          echo "❌ Build artifacts missing!"
+          exit 1
+        fi
+
+    - name: Upload generated PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: generated-resume
+        path: resume/Resume.pdf
+        retention-days: 7
+
+    - name: Upload build logs
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: build-logs
+        path: build/resume.log
+        retention-days: 7

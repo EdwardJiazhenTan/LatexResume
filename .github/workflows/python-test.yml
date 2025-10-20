@@ -1,0 +1,73 @@
+name: Local Python Build & Test
+
+on:
+  push:
+    branches: [ main, master, fullstack ]
+  pull_request:
+    branches: [ main, master, fullstack ]
+  workflow_dispatch:
+
+jobs:
+  python-build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          texlive-latex-base \
+          texlive-latex-extra \
+          texlive-fonts-recommended \
+          texlive-fonts-extra
+
+    - name: Install Python dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Create output directories
+      run: |
+        mkdir -p resume build
+
+    - name: Test resume generation
+      run: python generate_resume.py
+
+    - name: Verify PDF was generated
+      run: |
+        if [ -f "resume/Resume.pdf" ]; then
+          echo "✅ PDF generated successfully!"
+          ls -lh resume/Resume.pdf
+        else
+          echo "❌ PDF generation failed!"
+          exit 1
+        fi
+
+    - name: Test custom parameters
+      run: |
+        python generate_resume.py --pdf-name Test_Resume --no-backup
+
+    - name: Verify custom PDF
+      run: |
+        if [ -f "resume/Test_Resume.pdf" ]; then
+          echo "✅ Custom PDF generated successfully!"
+          ls -lh resume/Test_Resume.pdf
+        else
+          echo "❌ Custom PDF generation failed!"
+          exit 1
+        fi
+
+    - name: Upload generated PDFs
+      uses: actions/upload-artifact@v4
+      with:
+        name: generated-pdfs-python
+        path: resume/*.pdf
+        retention-days: 7
