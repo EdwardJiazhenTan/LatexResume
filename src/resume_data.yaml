@@ -1,0 +1,63 @@
+personal_info:
+  name: "John Michael Doe"
+  email: "jdoe42@u.example.edu"
+  phone: "555-123-4567"
+  location: "Boston, MA"
+  citizenship: "US Citizen"
+  links:
+    linkedin: "https://linkedin.com/in/john-m-doe"
+    github: "https://github.com/JohnMDoe"
+    portfolio: "https://johnmdoe.dev"
+    blog: "https://blog.johnmdoe.dev"
+
+summary: "Full-stack engineer who combines web development with systems programming 
+background. Shipped production features and developer tools. Dives deep into 
+fundamentals through projects and open-source contributions."
+
+education:
+  - institution: "State University of Technology"
+    location: "Boston, MA"
+    degree: "BS in Computer Science; BS in Data Analytics"
+    period: "Sep 2020 -- May 2024"
+
+experience:
+  - company: "TechWave Solutions"
+    location: "San Francisco, CA"
+    position: "Software Developer Intern"
+    period: "Jan 2024 -- Mar 2024"
+    achievements:
+      - "Developed frontend features with JavaScript in close collaboration with UI/UX designers, implementing real-time data visualizations and interactive dashboards for production analytics platform"
+      - "Built RESTful APIs and microservices for data processing pipeline, deployed on AWS Lambda with API Gateway and Docker, reducing query latency by 12% and average response time by 28%"
+      - "Automated CI/CD workflows using GitHub Actions, accelerating feature delivery by 18% and enabling daily automated testing deployments"
+  
+  - company: "DataStream Research Lab"
+    location: "Remote"
+    position: "Software Developer Intern"
+    period: "Jun 2023 -- Sep 2023"
+    achievements:
+      - "Rebuilt Express.js backend to support machine learning model deployment, refactoring data pipeline to handle streaming inputs and improving inference performance by 400% for real-time predictions"
+      - "Optimized network data transfer for large model artifacts, reducing bandwidth usage by 30% and enabling real-time collaboration for distributed development team"
+      - "Prototyped automated testing framework for comparing model predictions against benchmark datasets, reducing evaluation time by enabling parallel validation pipelines"
+
+projects:
+  - name: "TermEdit – Terminal Text Editor in Rust"
+    points:
+      - "Developed lightweight text editor from scratch in Rust achieving <4ms startup time for 12MB files"
+      - "Implemented incremental syntax highlighting, regex search functionality, and raw terminal control"
+  
+  - name: "TaskFlow – Project Management TUI"
+    points:
+      - "Built terminal application in Rust using ratatui and crossterm, streamlining task tracking through keyboard-driven interface"
+      - "Implemented real-time progress visualizations displaying Gantt charts with YAML data persistence"
+  
+  - name: "CodeReview – Algorithm Practice Platform"
+    points:
+      - "Launched full-stack application for spaced repetition learning of coding interview problems"
+      - "Integrated REST API with custom authentication and caching layer (Memcached), automated email reminders, deployed with Vue.js, MySQL, Flask"
+
+skills:
+  - category: "Languages & Frameworks"
+    items: "JavaScript, TypeScript, Rust, Python, SQL, Vue.js, React, Flask, Express.js, MySQL"
+  
+  - category: "Tools & Infrastructure"
+    items: "Git, Linux, Docker, AWS (Lambda, RDS, S3, API Gateway), CI/CD, REST, WebSocket, Nginx, Memcached"

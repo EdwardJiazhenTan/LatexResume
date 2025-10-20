@@ -10,8 +10,11 @@ resume_bak.yaml
 *.log
 *.out
 
-# Backup directories
-backups/
+# Generated resume files
+resume/
+
+# Backup directories (now inside resume/)
+# backups/ already covered by resume/
 
 # Python virtual environments
 venv/
@@ -20,3 +23,7 @@ env/
 
 # System files
 .DS_Store
+
+# YAML files (except resume_data.yaml in src/)
+*.yaml
+!src/resume_data.yaml

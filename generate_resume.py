@@ -65,7 +65,7 @@ def generate_latex_resume(data: dict, template_file: str, output_file: str):
     rendered = template.render(**data)
 
     with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(rendered)
+       f.write(rendered)
 
 def compile_pdf(tex_file: str, output_name: str = "Resume") -> bool:
     """Compile LaTeX file to PDF using pdflatex."""
@@ -85,6 +85,7 @@ def compile_pdf(tex_file: str, output_name: str = "Resume") -> bool:
         # Rename the output PDF to our desired name
         tex_path = Path(tex_file)
         generated_pdf = tex_path.with_suffix('.pdf')
+        # Ensure we output to the same directory as the tex file
         target_pdf = tex_path.parent / f"{output_name}.pdf"
 
         if generated_pdf.exists():
@@ -121,15 +122,15 @@ def create_backup(pdf_file: str, backup_dir: str = "backups"):
 
 def main():
     parser = argparse.ArgumentParser(description='Generate LaTeX resume from YAML data')
-    parser.add_argument('--data', '-d', default='resume_data.yaml',
+    parser.add_argument('--data', '-d', default='src/resume_data.yaml',
                        help='YAML file containing resume data')
-    parser.add_argument('--template', '-t', default='resume_template.tex',
+    parser.add_argument('--template', '-t', default='src/resume_template.tex',
                        help='LaTeX template file')
-    parser.add_argument('--output', '-o', default='resume.tex',
+    parser.add_argument('--output', '-o', default='resume/resume.tex',
                        help='Output LaTeX file')
     parser.add_argument('--pdf-name', default='Resume',
                        help='Name for the generated PDF (without .pdf extension)')
-    parser.add_argument('--backup-dir', default='backups',
+    parser.add_argument('--backup-dir', default='resume/backups',
                        help='Directory for timestamped backups')
     parser.add_argument('--no-pdf', action='store_true',
                        help='Skip PDF generation')
@@ -159,7 +160,9 @@ def main():
         # Generate PDF unless disabled
         if not args.no_pdf:
             if compile_pdf(args.output, args.pdf_name):
-                pdf_file = f"{args.pdf_name}.pdf"
+                # PDF is generated in the same directory as the tex file
+                output_dir = Path(args.output).parent
+                pdf_file = str(output_dir / f"{args.pdf_name}.pdf")
                 print(f"PDF generated: {pdf_file}")
 
                 # Create backup unless disabled
